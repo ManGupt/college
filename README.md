@@ -1,2 +1,2 @@
 # college
-College stuff
+College (NSIT) related lab programs, files
