@@ -1,0 +1,108 @@
+<html><head>
+<title>Plan 9 /sys/man/1/lex</title>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+</head><body bgcolor="#ffffff">
+   <br>
+<p><font size="+1"><b>NAME     <br></b></font>
+
+<table border="0" cellpadding="0" cellspacing="0"><tbody><tr height="2"><td></td></tr><tr><td
+ width="20"></td><td>
+
+    lex – generator of lexical analysis programs<br>
+    
+</td></tr></tbody></table>
+</p><p><font size="+1"><b>SYNOPSIS     <br></b></font>
+
+<table border="0" cellpadding="0" cellspacing="0"><tbody><tr height="2"><td></td></tr><tr><td
+ width="20"></td><td>
+
+    <tt><font size="+1">lex</font></tt> [ –<tt><font size="+1">tvn9</font></tt>
+ ] [ <i>file ...</i> ]<br>
+    
+</td></tr></tbody></table>
+</p><p><font size="+1"><b>DESCRIPTION     <br></b></font>
+
+<table border="0" cellpadding="0" cellspacing="0"><tbody><tr height="2"><td></td></tr><tr><td
+ width="20"></td><td>
+
+    <i>Lex</i> generates programs to be used in simple lexical analysis 
+of
+    text. The input <i>files</i> (standard input default) contain 
+regular
+    expressions to be searched for and actions written in C to be
+    executed when expressions are found.  <p>
+    A C source program, <tt><font size="+1">lex.yy.c</font></tt> is 
+generated. This program, when
+    run, copies unrecognized portions of the input to the output,
+    and executes the associated C action for each regular expression
+    that is recognized.  </p><p>
+    The options have the following meanings.<br>
+    –<tt><font size="+1">t&nbsp;&nbsp;&nbsp;&nbsp;</font></tt>Place the 
+result on the standard output instead of in file <tt><font size="+1">lex.yy.c</font></tt>.<br>
+    –<tt><font size="+1">v&nbsp;&nbsp;&nbsp;&nbsp;</font></tt>Print a 
+one–line summary of statistics of the generated analyzer.<br>
+    –<tt><font size="+1">n&nbsp;&nbsp;&nbsp;&nbsp;</font></tt>Opposite 
+of –<tt><font size="+1">v</font></tt>; –<tt><font size="+1">n</font></tt>
+ is default.<br>
+    –<tt><font size="+1">9&nbsp;&nbsp;&nbsp;&nbsp;</font></tt>Adds code 
+to be able to compile through the native C compilers.<br>
+    
+</p></td></tr></tbody></table>
+</p><p><font size="+1"><b>EXAMPLES     <br></b></font>
+
+<table border="0" cellpadding="0" cellspacing="0"><tbody><tr height="2"><td></td></tr><tr><td
+ width="20"></td><td>
+
+    This program converts upper case to lower, removes blanks at the
+    end of lines, and replaces multiple blanks by single blanks. 
+    <p>
+    <tt><font size="+1">%%<br>
+    [A–Z] 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;putchar(yytext[0]+'a'–'A');<br>
+    [ ]+$<br>
+    [ ]+ putchar(' ');<br>
+    </font></tt>
+</p></td></tr></tbody></table>
+</p><p><font size="+1"><b>FILES     <br></b></font>
+
+<table border="0" cellpadding="0" cellspacing="0"><tbody><tr height="2"><td></td></tr><tr><td
+ width="20"></td><td>
+
+    <tt><font size="+1">lex.yy.c&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></tt>output<br>
+    <tt><font size="+1">/sys/lib/lex/ncform&nbsp;&nbsp;&nbsp;</font></tt>template<br>
+    
+</td></tr></tbody></table>
+</p><p><font size="+1"><b>SEE ALSO     <br></b></font>
+
+<table border="0" cellpadding="0" cellspacing="0"><tbody><tr height="2"><td></td></tr><tr><td
+ width="20"></td><td>
+
+    <a href="http://plan9.bell-labs.com/magic/man2html/1/yacc"><i>yacc</i>(1)</a>,
+ <a href="http://plan9.bell-labs.com/magic/man2html/1/sed"><i>sed</i>(1)<br></a>
+    M. E. Lesk and E. Schmidt, `LEX--Lexical Analyzer Generator', <i>Unix
+
+    Research System Programmer's Manual,</i> Tenth Edition, Volume 2.<br>
+    
+</td></tr></tbody></table>
+</p><p><font size="+1"><b>SOURCE     <br></b></font>
+
+<table border="0" cellpadding="0" cellspacing="0"><tbody><tr height="2"><td></td></tr><tr><td
+ width="20"></td><td>
+
+    <tt><font size="+1">/sys/src/cmd/lex<br>
+    </font></tt>
+</td></tr></tbody></table>
+</p><p><font size="+1"><b>BUGS     <br></b></font>
+
+<table border="0" cellpadding="0" cellspacing="0"><tbody><tr height="2"><td></td></tr><tr><td
+ width="20"></td><td>
+
+    Cannot handle UTF.  <p>
+    The asteroid to kill this dinosaur is still in orbit.<br>
+    
+</p></td></tr></tbody></table>
+
+<table border="0" cellpadding="0" cellspacing="0"><tbody><tr height="20"><td></td></tr></tbody></table>
+<font size="-1"><a href="http://www.lucent.com/copyright.html">
+Copyright</a> © 2010 Lucent Technologies.  All rights reserved.</font>
+</p></body></html>

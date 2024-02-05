@@ -1,0 +1,378 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+
+<title>
+The LEX &amp; YACC Page
+</title>
+<meta name="keywords" content="lex, yacc, flex, bison,
+compiler, tools, parser generator, scanner generator,
+manual, documentation, tutorial, download">
+
+<meta name="description" content="Lex, Yacc, Flex, Bison: Overview, 
+Documentation, Tools, Pointers">
+
+</head><body bgcolor="white">
+
+<table>
+
+<tbody><tr>
+<td>
+<br>
+<h1><font size="8">
+<font color="#cccccc">The</font>
+<font color="#f7de9c">Lex &amp; Yacc</font>
+<font color="#cccccc">Page</font>
+</font></h1>
+</td>
+</tr>
+
+<tr>
+<td align="right">
+<i>The asteroid to kill this dinosaur is still in orbit.</i><br>
+<i>- Lex Manual Page</i>
+<br>
+<br>
+</td>
+</tr>
+
+
+
+<!-- CONTENTS ----------------------------------------------------------------->
+<tr>
+<td bgcolor="#f7de9c">
+<font color="black" face="helvetica">
+ON THIS PAGE
+</font>
+</td>
+</tr>
+<tr>
+<td>
+<a href="#overview">Overview</a> | 
+<a href="#lex">Lex</a> | 
+<a href="#yacc">Yacc</a> | 
+<a href="#flex">Flex</a> | 
+<a href="#bison">Bison</a> | 
+<a href="#tools">Tools</a> |
+<a href="#books">Books</a>
+<br>
+<br>
+</td>
+</tr>
+
+<!-- OVERIVIEW ---------------------------------------------------------------->
+<tr>
+<td bgcolor="#f7de9c">
+<font color="black" face="helvetica">
+<a name="overview">OVERVIEW</a>
+</font>
+</td>
+</tr>
+<tr>
+<td>
+A compiler or interptreter for a programminning language
+is often decomposed into two parts:
+<ol type="1">
+<li>
+Read the source program and discover its structure.
+</li><li>
+Process this structure, e.g. to generate the target program.
+</li></ol>
+<i>Lex</i> and <i>Yacc</i>
+can generate program fragments that solve the first task.
+<p>
+The task of discovering the source structure again is decomposed into
+subtasks:
+</p><ol type="1">
+<li>
+Split the source file into tokens (<i>Lex</i>).
+</li><li>
+Find the hierarchical structure of the program (<i>Yacc</i>).
+</li></ol>
+<p>
+</p><ul>
+<li>
+<a href="http://memphis.compilertools.net/interpreter.html">A First 
+Example:
+A Simple Interpreter</a>
+<br>
+<br>
+</li></ul>
+</td>
+</tr>
+
+<!-- LEX ---------------------------------------------------------------------->
+<tr>
+<td bgcolor="#f7de9c">
+<font color="black" face="helvetica">
+<a name="lex">LEX</a>
+</font>
+</td>
+</tr>
+<tr>
+<td>
+<h2>Lex - A Lexical Analyzer Generator</h2>
+<i>M. E. Lesk and E. Schmidt</i>
+<p>
+Lex helps write programs whose control flow is  directed  by
+instances of regular expressions in the input stream.  It is well
+suited for editor-script type transformations and for  segmenting
+input in preparation for a parsing routine.
+</p><p>
+Lex source is a table of regular expressions and corresponding
+program  fragments.   The  table  is translated to a program
+which reads an input stream, copying it to an output  stream  and
+partitioning the input into strings which match the given expressions.
+As each such string is recognized the corresponding  program fragment
+is executed.  The recognition of the expressions is
+performed by a deterministic finite automaton generated  by  Lex.
+The  program  fragments  written  by the user are executed in the
+order in which the corresponding regular expressions occur in the
+input stream.
+</p><p>
+</p><ul>
+<li>
+<a href="http://dinosaur.compilertools.net/lex/index.html">Online Manual</a>
+</li><li>
+<a href="http://dinosaur.compilertools.net/lex/lex.ps">PostScript</a>
+</li><li>
+<a href="http://plan9.bell-labs.com/magic/man2html/1/lex">Lex Manual 
+Page</a>
+</li></ul>
+<br>
+</td>
+</tr>
+
+<!-- YACC --------------------------------------------------------------------->
+<tr>
+<td bgcolor="#f7de9c">
+<font color="black" face="helvetica">
+<a name="yacc">YACC</a>
+</font>
+</td>
+</tr>
+<tr>
+<td>
+<h2>Yacc: Yet Another Compiler-Compiler</h2>
+<i>Stephen C. Johnson</i>
+<p>
+Computer program input generally has  some  structure;
+in  fact, every computer program that does input
+can be thought of as  defining  an  ``input  language''
+which  it accepts.  An input language may be as complex
+as a programming language, or as simple as  a  sequence
+of  numbers.  Unfortunately, usual input facilities are
+limited, difficult to use,  and  often  are  lax  about
+checking their inputs for validity.
+</p><p>
+Yacc provides a general tool  for  describing  the
+input  to  a computer program.  The Yacc user specifies
+the structures of his input, together with code  to  be
+invoked  as  each  such  structure is recognized.  Yacc
+turns such a specification into a subroutine that  han-
+dles  the  input  process; frequently, it is convenient
+and appropriate to have most of the flow of control  in
+the user's application handled by this subroutine.
+</p><p>
+</p><ul>
+<li>
+<a href="http://dinosaur.compilertools.net/yacc/index.html">Online 
+Manual</a>
+</li><li>
+<a href="http://dinosaur.compilertools.net/yacc/yacc.ps">PostScript</a>
+</li><li>
+<a href="http://plan9.bell-labs.com/magic/man2html/1/yacc">Yacc Manual 
+Page</a>
+</li></ul>
+<br>
+</td>
+</tr>
+
+<!-- FLEX --------------------------------------------------------------------->
+<tr>
+<td bgcolor="#f7de9c">
+<font color="black" face="helvetica">
+<a name="flex">FLEX</a>
+</font>
+</td>
+</tr>
+<tr>
+<td>
+<h2>Flex, A fast scanner generator</h2>
+<i>Vern Paxson</i>
+<p>
+flex is a tool for generating scanners: programs which recognized 
+lexical
+patterns in text.  flex reads the given input files, or its standard
+input if no file names are given, for a description of a scanner to 
+generate.
+The description is in the form of pairs of regular expressions and C
+code, called rules. flex generates as output a C source file, 
+`lex.yy.c',
+which defines a routine `yylex()'. This file is compiled and
+linked with the `-lfl' library to produce an executable.
+When the executable is run, it analyzes its input for occurrences
+of the regular expressions. Whenever it finds one,
+it executes the corresponding C code. 
+</p><p>
+
+</p><ul>
+<li>
+<a href="http://dinosaur.compilertools.net/flex/index.html">Online 
+Manual</a>
+</li><li>
+<a href="http://dinosaur.compilertools.net/flex/flex.ps">PostScript</a>
+</li><li>
+<a href="http://dinosaur.compilertools.net/flex/manpage.html">Flex 
+Manual Page</a>
+</li><li>
+<a href="ftp://prep.ai.mit.edu/pub/gnu/">Download Flex from
+ftp://prep.ai.mit.edu/pub/gnu/</a>
+</li></ul>
+<br>
+
+</td>
+</tr>
+
+<!-- BISON -------------------------------------------------------------------->
+<tr>
+<td bgcolor="#f7de9c">
+<font color="black" face="helvetica">
+<a name="bison">BISON</a>
+</font>
+</td>
+</tr>
+<tr>
+<td>
+<h2>Bison, The YACC-compatible Parser Generator</h2>
+<i>Charles Donnelly and Richard Stallman</i>
+<p>
+Bison is a general-purpose parser generator that converts a grammar 
+description for an LALR(1) context-free grammar into a C program to
+parse that grammar. Once you are proficient with Bison, you may use it 
+to develop a wide range of language parsers, from those used in simple
+desk calculators to complex programming languages. 
+</p><p>
+Bison is upward compatible with Yacc: all properly-written Yacc grammars
+ ought to work with Bison with no change. Anyone familiar with
+Yacc should be able to use Bison with little trouble. 
+</p><p>
+
+</p><ul>
+<li>
+<a href="http://dinosaur.compilertools.net/bison/index.html">Online 
+Manual</a>
+</li><li>
+<a href="http://dinosaur.compilertools.net/bison/bison.ps">PostScript</a>
+</li><li>
+<a href="http://dinosaur.compilertools.net/bison/manpage.html">Bison 
+Manual Page</a>
+</li><li>
+<a href="ftp://prep.ai.mit.edu/pub/gnu/">Download Bison from
+ftp://prep.ai.mit.edu/pub/gnu/</a>
+
+</li></ul>
+<br>
+
+</td>
+</tr>
+
+<!-- TOOLS -------------------------------------------------------------------->
+<tr>
+<td bgcolor="#f7de9c">
+<font color="black" face="helvetica">
+<a name="tools">TOOLS</a>
+</font>
+</td>
+</tr>
+<tr>
+<td>
+
+<br>
+Other tools for compiler writers:
+<ul>
+<li><a href="http://catalog.compilertools.net/kits.html">Compiler 
+Construction Kits</a>
+</li><li><a href="http://catalog.compilertools.net/lexparse.html">Lexer 
+and Parser Generators</a>
+</li><li><a href="http://catalog.compilertools.net/attribute.html">Attribute
+ Grammar Systems</a>
+</li><li><a href="http://catalog.compilertools.net/trafo.html">Transformation
+ Tools</a>
+</li><li><a href="http://catalog.compilertools.net/backend.html">Backend
+ Generators</a>
+</li><li><a href="http://catalog.compilertools.net/optim.html">Program 
+Analysis and Optimisation</a>
+</li><li><a href="http://catalog.compilertools.net/env.html">Environment
+ Generators</a>
+</li><li><a href="http://catalog.compilertools.net/infra.html">Infrastructure,
+ Components, Tools</a>
+</li><li><a href="http://catalog.compilertools.net/java.html">Compiler 
+Construction with Java</a>
+</li></ul>
+<br>
+
+</td>
+</tr>
+
+<!-- BOOKS -------------------------------------------------------------------->
+<tr>
+<td bgcolor="#f7de9c">
+<font color="black" face="helvetica">
+<a name="books">BOOKS</a>
+</font>
+</td>
+</tr>
+<tr>
+<td>
+<table> <!-- books -->
+<tbody><tr>
+<td>
+<img src="The%20LEX%20&amp;%20YACC%20Page_files/birds.gif" alt="birds" 
+width="100">
+</td>
+<td valign="top">
+<a href="http://www.ora.com/catalog/lex/index.html">Lex &amp; Yacc</a><br>
+John R. Levine, Tony Mason, Doug Brown <br>
+Paperback - 366 pages 2nd/updated edition (October 1992)<br>
+O'Reilly &amp; Associates<br>
+ISBN: 1565920007
+</td>
+</tr>
+<tr>
+<td>
+<img src="The%20LEX%20&amp;%20YACC%20Page_files/dragon.gif" alt="dragon"
+ width="100">
+</td>
+<td valign="top">
+<a 
+href="http://www1.fatbrain.com/asp/bookinfo/bookinfo.asp?theisbn=0201100886&amp;vm=c">Compilers:
+Principles,
+ Techniques, and Tools</a><br>
+Alfred V. Aho, Ravi Sethi, Jeffrey D. Ullman<br>
+Addison-Wesley Pub Co<br>
+ISBN: 0201100886
+</td>
+</tr>
+<tr>
+<td>
+<img src="The%20LEX%20&amp;%20YACC%20Page_files/tiger.gif" alt="tiger" 
+width="100">
+</td>
+<td valign="top">
+<a href="http://www.cs.princeton.edu/%7Eappel/modern/c/index.html">Modern
+Compiler
+ Implementation in C</a><br>
+Andrew W. Appel, Maia Ginsburg<br>
+Hardcover - 560 pages Rev expand edition (January 1998)<br>
+Cambridge University Press<br>
+ISBN: 052158390X<br>
+</td>
+</tr>
+</tbody></table> <!-- books -->
+</td>
+</tr>
+
+<!----------------------------------------------------------------------------->
+</tbody></table>
+
+</body></html>

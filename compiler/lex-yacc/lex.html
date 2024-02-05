@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>pltplp.net - A little manual for Lex and Yacc - Use of Lex in syntaxical analysis</title>
+    <link rel="stylesheet" href="/styles/main.css" /><link title="Index" href="index.html.en" rel="start" /><link title="The grammar used" href="grammar.html.en" rel="prev" /><link title="Syntaxical analysis with Yacc" href="yacc.html.en" rel="next" />
+  </head>
+  
+  <body>
+    <div id="header">
+      <div id="logo"><a href="/" shape="rect"><img src="/img/logo" alt="pltplp.net" height="66" width="283" /></a></div>
+      <div id="navh"><a href="/ippl/" shape="rect">ippl</a> | <a href="/bobot++/" shape="rect">bobot++</a> | <a href="/lex-yacc/" shape="rect">Lex &amp; Yacc</a> | <a href="/" shape="rect">Home</a> | <a href="/about/" shape="rect">About</a></div>
+    </div>
+
+    <div id="main">
+      <div id="navg"><ul><li><a href="grammar.html.en">Grammar</a></li><li><a href="lex.html.en">Lex</a></li><li><a href="yacc.html.en">Yacc</a></li><li><a href="example.html.en">Example</a></li><li><a href="conclusion.html.en">Conclusion</a></li></ul> </div>
+      <div id="content"><h1>2. Use of Lex in syntaxical analysis</h1><p>The purpose of the lexical analysis is to transform a series
+    of symbols into <b>tokens</b> (a token may be a number, a
+    "+" sign, a reserved word for the language, etc.). Once this
+    transformation is done, the syntaxical analyser will be able to do
+    its job (see below). So, the aim of the lexical analyser is to
+    consum symbols and to pass them back to the syntaxical
+    analyser.</p><p>A Lex description file can be divided into three parts,
+    using the following plan:</p><table class="code" cellpadding="10">
+<tr>
+<td>
+<pre>declarations
+%%
+productions
+%%
+additionnal code</pre>
+</td>
+</tr>
+</table><p>in which no part is required. However, the first
+    <tt>%%</tt> is required, in order to mark the
+    separation between the declarations and the productions.</p><h2><a class="normal" id="N0x8059d50.0x80742b4">
+<a class="normal" id="N10053">2.1. First part of a Lex file: declarations</a>
+</a></h2><p>This part of a Lex file may contain:</p><ul>
+
+        <li>Code written in the target language (usually C or C++),
+        embraced between <tt>%{</tt> and
+        <tt>%}</tt>, which will be placed at the top of
+        the file that Lex will create.  That is the place where we
+        usually put the include files. Lex will put "as is" all the
+        content enclosed between these signs in the target file. The
+        two signs will have to be placed at the beginning of the
+        line.</li>
+
+        <li>Regular expressions, defining non-terminal notions, such
+        as <i>letters</i>, <i>digits</i>, and
+        <i>numbers</i>. This specifications have the form:
+        <tt>notion regular_expression</tt> You will be
+        able to use the notions defined this way in the end of the
+        first part of the file, and in the second part of the file, if
+        you embrace them between <tt>{</tt> and
+        <tt>}</tt>.</li>
+
+	  </ul><p>Example:</p><table class="code" cellpadding="10">
+<tr>
+<td>
+<pre>%{
+
+#include "calc.h"
+
+#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+
+%}
+
+/* Regular expressions */
+/* ------------------- */
+
+white		[\t\n ]+
+letter		[A-Za-z]
+digit10         [0-9]			/* base 10 */
+digit16 	[0-9A-Fa-f]		/* base 16 */
+
+identifier	{letter}(_|{letter}|{digit10})*
+int10   	{digit10}+</pre>
+</td>
+</tr>
+</table><p>The example by itself is, I hope, easy to understand, but
+	  let's have a deeper look into regular expressions.</p><h2><a class="normal" id="N0x8059d50.0x80745cc">
+<a class="normal" id="N10084">2.2. Regular expressions</a>
+</a></h2><table>
+        <tr>
+          <th>Symbol</th>
+          <th>Meaning</th>
+        </tr>
+        <tr>
+          <td>x</td>
+          <td>the "x" character</td>
+        </tr>
+        <tr>
+          <td>.</td>
+          <td>any character except \n</td>
+        </tr>
+        <tr>
+          <td>[xyz]</td>
+          <td>either x, y or z</td>
+        </tr>
+        <tr>
+          <td>[^bz]</td>
+          <td>any character, <b>except</b> b and z</td>
+        </tr>
+        <tr>
+          <td>[a-z]</td>
+          <td>any character between a and z</td>
+        </tr>
+        <tr>
+          <td>[^a-z]</td>
+          <td>any character, <b>except</b> those between a and
+          z</td>
+        </tr>
+        <tr>
+          <td>R*</td>
+          <td>zero R or more; R can be any regular expression</td>
+        </tr>
+        <tr>
+          <td>R+</td>
+          <td>one R or more</td>
+        </tr>
+        <tr>
+          <td>R?</td>
+          <td>one or zero R (that is an optional R)</td>
+        </tr>
+        <tr>
+          <td>R{2,5}</td>
+          <td>2 to 5 R</td>
+        </tr>
+        <tr>
+          <td>R{2,}</td>
+          <td>2 R or more</td>
+        </tr>
+        <tr>
+          <td>R{2}</td>
+          <td>exactly 2 R</td>
+        </tr>
+        <tr>
+          <td>"[xyz\"foo"</td>
+          <td>the string "[xyz"foo"</td>
+        </tr>
+        <tr>
+          <td>{NOTION}</td>
+          <td>expansion of NOTION, that as been defined above in the
+          file</td>
+        </tr>
+        <tr>
+          <td>\X</td>
+          <td>if X is a "a", "b", "f", "n", "r", "t", or "v",
+          this represents the ANSI-C interpretation of \X</td>
+        </tr>
+        <tr>
+          <td>\0</td>
+          <td>ASCII 0 character</td>
+        </tr>
+        <tr>
+          <td>\123</td>
+          <td>the caracter which ASCII code is 123, <b>in
+          octal</b>
+</td>
+        </tr>
+        <tr>
+          <td>\x2A</td>
+          <td>the caracter which ASCII code is 2A, <b>in
+          hexadecimal</b>
+</td>
+        </tr>
+        <tr>
+          <td>RS</td>
+          <td>R followed by S</td>
+        </tr>
+        <tr>
+          <td>R|S</td>
+          <td>R or S</td>
+        </tr>
+        <tr>
+          <td>R/S</td>
+          <td>R, only if followed by S</td>
+        </tr>
+        <tr>
+          <td>^R</td>
+          <td>R, only at the beginning of a line</td>
+        </tr>
+        <tr>
+          <td>R$</td>
+          <td>R, only at the end of a line</td>
+        </tr>
+        <tr>
+          <td>&lt;&lt;EOF&gt;&gt;</td>
+          <td>end of file</td>
+        </tr>
+      </table><p>So the definition:</p><table class="code" cellpadding="10">
+<tr>
+<td>
+<pre>identifier  {letter}(_|{letter}|{digit10})*</pre>
+</td>
+</tr>
+</table><p>will match as identifiers the words "integer",
+      "a_variable", "a1", but not
+      "_ident" nor "1variable". Easy, isn't
+      it?</p><p>As a last example, this is the definition of a real
+      number:</p><table class="code" cellpadding="10">
+<tr>
+<td>
+<pre>digit		[0-9]
+integer		{digit}+
+exponant	[eE][+-]?{integer}
+real		{integer}("."{integer})?{exponant}?</pre>
+</td>
+</tr>
+</table><h2><a class="normal" id="N0x8059d50.0x807c1b4">
+<a class="normal" id="N10185">2.3. Second part of a Lex file: productions</a>
+</a></h2><p>This part is aimed to instruct Lex what to do in he
+      generated analyser when it will encounter one notion or another
+      one. It may contain:</p><ul>
+
+        <li>Some specifications, written in the target language
+        (usually C or C++) surrounded by <tt>%{</tt> and
+        <tt>%}</tt> (at the beginning of a line). The
+        specifications will be put at the beginning of the
+        <tt>yylex()</tt> function, which is the function
+        that consums the tokens, and returns an integer.</li>
+
+        <li>Productions, having the syntax:
+        <tt>regular_expression action</tt> If
+        <tt>action</tt> is missing, Lex will put the
+        matching characters as is into the standard output. If
+        <tt>action</tt> is specified, it has to be written
+        in the target language. If it contains more than one
+        instruction or is written in more than one line, you will have
+        to embrace it between <tt>{</tt> and
+        <tt>}</tt>.</li>
+
+      </ul><p>You should also note that comment such as <tt>/*
+      ... */</tt> can be present in the second part of a Lex
+      file only if enclosed between braces, in the
+      <tt>action</tt> part of the statements. Otherwise,
+      Lex would consider them as regular expressions or actions, which
+      would give errors, or, at least, a weird behaviour.</p><p>Finally, the <tt>yytext</tt> variable used in
+      the actions contains the characters accepted by the regular
+      expression. This is a char table, of length
+      <tt>yyleng</tt> (ie, <tt>char
+      yytext[yyleng]</tt>).</p><p>Example:</p><table class="code" cellpadding="10">
+<tr>
+<td>
+<pre>%%
+[ \t]+$         ;
+[ \t]+          printf(" ");</pre>
+</td>
+</tr>
+</table><p>This little Lex file will generate a program that will
+      suppress the space characters that are not useful. You can also
+      notice with that little program that Lex is not reserved to
+      interpreters or compilers, and can be used, for example, for
+      searches and replaces, etc.</p><h2><a class="normal" id="N0x8059d50.0x807c600">
+<a class="normal" id="N101CB">2.4. Third part: additional code</a>
+</a></h2><p>You can put in this optional part all the code you
+      want. If you don't put anything here, Lex will consider that it
+      is just:</p><table class="code" cellpadding="10">
+<tr>
+<td>
+<pre>main() {
+  yylex();
+}</pre>
+</td>
+</tr>
+</table><h2><a class="normal" id="N0x8059d50.0x807c6dc">
+<a class="normal" id="N101D5">2.5. Conclusion about Lex</a>
+</a></h2><p>As you can see it, Lex is quite easy to use (but it can be
+      more complicated if you use start conditions). We have not seen
+      all the possibilities of Lex, and I suggest that you read its
+      man page for a more detailed information.</p><hr /><div class="navbas">
+<div class="navbasleft">
+<a href="grammar.html.en">Previous:<br />The grammar used</a>
+</div>
+<div class="navbascenter">
+<a href="index.html.en">Table of contents</a>
+</div>
+<div class="navbasright">
+<a href="yacc.html.en">
+<br />Syntaxical analysis with Yacc</a>
+</div>
+</div></div>
+    </div>
+
+    <hr class="hide" />
+
+    <div id="footer">
+      Copyright © 2001-2002 Etienne Bernard (eb at pltplp dot net)
+      <a href="/spammer-heaven/" shape="rect"><img src="/img/vide.gif" width="1" height="1" alt="Spambot catcher" /></a><br />
+      <a href="http://validator.w3.org/check/referer" shape="rect"><img src="/img/vxhtml10" width="88" height="31" alt="Valid XHTML 1.0!" /></a>
+      <a href="http://jigsaw.w3.org/css-validator/" shape="rect"><img src="/img/vcss" width="88" height="31" alt="Valid CSS!" /></a>
+    </div>
+
+  </body>
+
+</html>

@@ -1,0 +1,975 @@
+From: <Saved by Windows Internet Explorer 8>
+Subject: Compilers
+Date: Tue, 21 Sep 2010 10:15:14 +0530
+MIME-Version: 1.0
+Content-Type: multipart/related;
+	type="text/html";
+	boundary="----=_NextPart_000_0055_01CB5975.E1D8AB30"
+X-MimeOLE: Produced By Microsoft MimeOLE V6.00.2900.5994
+
+This is a multi-part message in MIME format.
+
+------=_NextPart_000_0055_01CB5975.E1D8AB30
+Content-Type: text/html;
+	charset="Windows-1252"
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://www.personal.kent.edu/~rmuhamma/Compilers/compiler.html
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!--compiler.html--><HTML><HEAD><TITLE>Compilers</TITLE>
+<META content=3D"text/html; charset=3Dwindows-1252" =
+http-equiv=3DContent-Type>
+<META name=3DAuthor content=3D"Rashid Bin Muhammad"><LINK =
+rel=3D"shortcut icon"=20
+href=3D"../rbm.ico"><LINK title=3D"link style" rel=3Dstylesheet =
+type=3Dtext/css=20
+href=3D"http://www.personal.kent.edu/~rmuhamma/mainLink.css">
+<META name=3DGENERATOR content=3D"MSHTML 8.00.6001.18939"></HEAD>
+<BODY =
+background=3Dhttp://www.personal.kent.edu/~rmuhamma/Maingif/Bck2.gif=20
+aLink=3D#ff0000 link=3D#0000ff vLink=3D#0000ff><!-- Body and=0A=
+ text color -->
+<CENTER>
+<P><IMG =
+src=3D"http://www.personal.kent.edu/~rmuhamma/Maingif/redline.gif"=20
+width=3D640 height=3D2>=20
+<P><IMG=20
+src=3D"http://www.personal.kent.edu/~rmuhamma/MainButtons/compiler-btn.gi=
+f">=20
+<P><B><I>"Real programmers can write assembly code in any language."</I> =
+- Larry=20
+Wall</B></P>
+<P><IMG =
+src=3D"http://www.personal.kent.edu/~rmuhamma/Maingif/redline.gif"=20
+width=3D640 height=3D2> </P>
+<P><A=20
+href=3D"http://www.personal.kent.edu/~rmuhamma/Algorithms/algorithm.html"=
+><FONT=20
+size=3D4>Algorithms</FONT></A><FONT size=3D4>&nbsp;| <A=20
+href=3D"http://www.personal.kent.edu/~rmuhamma/Compgeometry/compgeom.html=
+">Computational=20
+Geometry</A>&nbsp;|&nbsp;<A=20
+href=3D"http://www.personal.kent.edu/~rmuhamma/ComArchitec/comArchitec.ht=
+ml">Computer=20
+Architecture</A> | <A=20
+href=3D"http://www.personal.kent.edu/~rmuhamma/CompScience/cs.html">Compu=
+ter=20
+Science</A><BR><A=20
+href=3D"http://www.personal.kent.edu/~rmuhamma/EngiTech/engiTech.htm">Eng=
+ineering/Technology</A>=20
+| <A =
+href=3D"http://www.personal.kent.edu/~rmuhamma/Systems/java.htm">Java</A>=
+ |=20
+<A =
+href=3D"http://www.personal.kent.edu/~rmuhamma/OpSystems/os.html">Operati=
+ng=20
+Systems</A> | <A=20
+href=3D"http://www.personal.kent.edu/~rmuhamma/Parallel/parallel.html">Pa=
+rallel=20
+Computing</A>&nbsp;</FONT>&nbsp;</P></CENTER>
+<H3><IMG =
+src=3D"http://www.personal.kent.edu/~rmuhamma/Maingif/blueball.gif">=20
+Compilers Lecture Notes</H3>
+<OL>
+  <LI><A=20
+  =
+href=3D"http://www.personal.kent.edu/~rmuhamma/Compilers/MyCompiler/compi=
+lerIntro.htm"><FONT=20
+  size=3D4>Compilers: An Introduction</FONT></A>=20
+  <LI><A=20
+  =
+href=3D"http://www.personal.kent.edu/~rmuhamma/Compilers/MyCompiler/phase=
+.htm"><FONT=20
+  size=3D4>Phases of Compiler</FONT></A>=20
+  <LI><A=20
+  =
+href=3D"http://www.personal.kent.edu/~rmuhamma/Compilers/MyCompiler/synta=
+xDef.htm"><FONT=20
+  size=3D4>Syntax Definition</FONT></A>
+  <UL>
+    <LI><A=20
+    =
+href=3D"http://www.personal.kent.edu/~rmuhamma/Compilers/MyCompiler/ambig=
+uity.htm"><FONT=20
+    size=3D4>Ambiguity</FONT></A>=20
+    <LI><FONT size=3D4>Removal of Ambiguity</FONT>
+    <UL>
+      <LI><A=20
+      =
+href=3D"http://www.personal.kent.edu/~rmuhamma/Compilers/MyCompiler/assoc=
+iativityOps.htm"><FONT=20
+      size=3D4>Associativity of Operators</FONT></A>=20
+      <LI><A=20
+      =
+href=3D"http://www.personal.kent.edu/~rmuhamma/Compilers/MyCompiler/prece=
+denceOps.htm"><FONT=20
+      size=3D4>Precedence of Operators</FONT></A>=20
+      <LI><A=20
+      =
+href=3D"http://www.personal.kent.edu/~rmuhamma/Compilers/MyCompiler/separ=
+ateRule.htm"><FONT=20
+      size=3D4>Separate Rule</FONT></A> </LI></UL>
+    <LI><A=20
+    =
+href=3D"http://www.personal.kent.edu/~rmuhamma/Compilers/MyCompiler/synta=
+xDirectTrans.htm"><FONT=20
+    size=3D4>Syntax-Directed Translation</FONT></A>=20
+    <LI><A=20
+    =
+href=3D"http://www.personal.kent.edu/~rmuhamma/Compilers/MyCompiler/parsi=
+ng.htm"><FONT=20
+    size=3D4>Parsing</FONT></A>
+    <UL>
+      <LI><A=20
+      =
+href=3D"http://www.personal.kent.edu/~rmuhamma/Compilers/MyCompiler/topDo=
+wnParse.htm"><FONT=20
+      size=3D4>Top-down Parser</FONT></A>=20
+      <LI><A=20
+      =
+href=3D"http://www.personal.kent.edu/~rmuhamma/Compilers/MyCompiler/predi=
+ctiveParse.htm"><FONT=20
+      size=3D4>Predictive Parser</FONT></A> </LI></UL>
+    <LI><A=20
+    =
+href=3D"http://www.personal.kent.edu/~rmuhamma/Compilers/MyCompiler/leftR=
+ecursion.htm"><FONT=20
+    size=3D4>Left Recursion</FONT></A> </LI></UL>
+  <LI><A=20
+  =
+href=3D"http://www.personal.kent.edu/~rmuhamma/Compilers/MyCompiler/lexic=
+alAnalyzer.htm"><FONT=20
+  size=3D4>Lexical Analyzer</FONT></A>
+  <UL>
+    <LI><A=20
+    =
+href=3D"http://www.personal.kent.edu/~rmuhamma/Compilers/MyCompiler/regul=
+arExpression.htm"><FONT=20
+    size=3D4>Regular Expression (RE)</FONT></A>=20
+    <LI><A=20
+    =
+href=3D"http://www.personal.kent.edu/~rmuhamma/Compilers/MyCompiler/regul=
+arDef.htm"><FONT=20
+    size=3D4>Regular Definition</FONT></A>=20
+    <LI><A=20
+    =
+href=3D"http://www.personal.kent.edu/~rmuhamma/Compilers/MyCompiler/finit=
+eAutomata.htm"><FONT=20
+    size=3D4>Finite Automata</FONT></A>
+    <UL>
+      <LI><A=20
+      =
+href=3D"http://www.personal.kent.edu/~rmuhamma/Compilers/MyCompiler/nfa.h=
+tm"><FONT=20
+      size=3D4>Nondeterministic Finite Automata (NFA)</FONT></A>=20
+      <LI><A=20
+      =
+href=3D"http://www.personal.kent.edu/~rmuhamma/Compilers/MyCompiler/dfa.h=
+tm"><FONT=20
+      size=3D4>Deterministic Finite Automata (DFA)</FONT></A>=20
+      <LI><A=20
+      =
+href=3D"http://www.personal.kent.edu/~rmuhamma/Compilers/MyCompiler/NFAto=
+DFA.htm"><FONT=20
+      size=3D4>Conversion of NFA into DFA</FONT></A>=20
+      <LI><A=20
+      =
+href=3D"http://www.personal.kent.edu/~rmuhamma/Compilers/MyCompiler/reExp=
+toNFA.htm"><FONT=20
+      size=3D4>Conversion of RE into NFA</FONT></A> </LI></UL></LI></UL>
+  <LI><A=20
+  =
+href=3D"http://www.personal.kent.edu/~rmuhamma/Compilers/MyCompiler/codeG=
+en.htm"><FONT=20
+  size=3D4>Code Generation</FONT></A>=20
+  <LI><A=20
+  =
+href=3D"http://www.personal.kent.edu/~rmuhamma/Compilers/compiler-books.h=
+tml"><FONT=20
+  size=3D4>References</FONT></A> </LI></OL>
+<P>&nbsp;</P>
+<CENTER>
+<TABLE border=3D2 cellSpacing=3D2 cellPadding=3D20 width=3D"70%">
+  <TBODY>
+  <TR>
+    <CENTER>
+    <TH height=3D"10%" width=3D"100%" colSpan=3D2>Compilers Source Codes =
+
+  </TH></CENTER></TR>
+  <TR>
+    <TD rowSpan=3D2 width=3D"30%">
+      <CENTER>Lexical Analysis (Lexer)</CENTER></TD>
+    <TD><A=20
+      =
+href=3D"http://www.personal.kent.edu/~rmuhamma/Compilers/Codes/lexer/driv=
+er1.c">driver1.c</A>=20
+      | <A=20
+      =
+href=3D"http://www.personal.kent.edu/~rmuhamma/Compilers/Codes/lexer/lex.=
+txt">lex.txt</A>=20
+      | <A=20
+      =
+href=3D"http://www.personal.kent.edu/~rmuhamma/Compilers/Codes/lexer/lex.=
+mk">lex.mk</A>=20
+      | <A=20
+      =
+href=3D"http://www.personal.kent.edu/~rmuhamma/Compilers/Codes/lexer/lex.=
+yy.c">lex.yy.c</A>=20
+      | <A=20
+      =
+href=3D"http://www.personal.kent.edu/~rmuhamma/Compilers/Codes/lexer/lexe=
+r.l">lexer.l</A>=20
+      | <A=20
+      =
+href=3D"http://www.personal.kent.edu/~rmuhamma/Compilers/Codes/lexer/make=
+file">makefile</A>=20
+      | <A=20
+      =
+href=3D"http://www.personal.kent.edu/~rmuhamma/Compilers/Codes/lexer/tabl=
+e.c">table.c</A>=20
+      | <A=20
+      =
+href=3D"http://www.personal.kent.edu/~rmuhamma/Compilers/Codes/lexer/toke=
+n.h">token.h</A>=20
+      .</TD></TR>
+  <TR>
+    <TD><B>ori:</B> <A=20
+      =
+href=3D"http://www.personal.kent.edu/~rmuhamma/Compilers/Codes/lexer/ori/=
+driver.c">driver.c</A>=20
+      | <A=20
+      =
+href=3D"http://www.personal.kent.edu/~rmuhamma/Compilers/Codes/lexer/ori/=
+lex.txt">lex.txt</A>=20
+      | <A=20
+      =
+href=3D"http://www.personal.kent.edu/~rmuhamma/Compilers/Codes/lexer/ori/=
+lex.handin.txt">lex.handin.txt</A>=20
+      | <A=20
+      =
+href=3D"http://www.personal.kent.edu/~rmuhamma/Compilers/Codes/lexer/ori/=
+lex.mk">lex.mk</A>=20
+      | <A=20
+      =
+href=3D"http://www.personal.kent.edu/~rmuhamma/Compilers/Codes/lexer/ori/=
+lexer.l">lexer.l</A>=20
+      | <A=20
+      =
+href=3D"http://www.personal.kent.edu/~rmuhamma/Compilers/Codes/lexer/ori/=
+makefile">makefile</A>=20
+      | <A=20
+      =
+href=3D"http://www.personal.kent.edu/~rmuhamma/Compilers/Codes/lexer/ori/=
+token.h">token.h</A>=20
+      .</TD></TR>
+  <TR>
+    <TD>
+      <CENTER>Parser </CENTER>
+      <H4></H4></TD>
+    <TD><A=20
+      =
+href=3D"http://www.personal.kent.edu/~rmuhamma/Compilers/Codes/parser/dri=
+ver2.c">driver2.c</A>=20
+      | <A=20
+      =
+href=3D"http://www.personal.kent.edu/~rmuhamma/Compilers/Codes/parser/hel=
+lo.out">hello.out</A>=20
+      | <A=20
+      =
+href=3D"http://www.personal.kent.edu/~rmuhamma/Compilers/Codes/parser/his=
+t.out">hist.out</A>=20
+      | <A=20
+      =
+href=3D"http://www.personal.kent.edu/~rmuhamma/Compilers/Codes/parser/lex=
+er.l">lexer.l</A>=20
+      | <A=20
+      =
+href=3D"http://www.personal.kent.edu/~rmuhamma/Compilers/Codes/parser/mak=
+efile">makefile</A>=20
+      | <A=20
+      =
+href=3D"http://www.personal.kent.edu/~rmuhamma/Compilers/Codes/parser/par=
+se.txt">parse.txt</A>=20
+      | <A=20
+      =
+href=3D"http://www.personal.kent.edu/~rmuhamma/Compilers/Codes/parser/par=
+se.mk">parse.mk</A>=20
+      | <A=20
+      =
+href=3D"http://www.personal.kent.edu/~rmuhamma/Compilers/Codes/parser/par=
+ser.y">parser.y</A>=20
+      | <A=20
+      =
+href=3D"http://www.personal.kent.edu/~rmuhamma/Compilers/Codes/parser/sie=
+ve.out">sieve.out</A>=20
+      | <A=20
+      =
+href=3D"http://www.personal.kent.edu/~rmuhamma/Compilers/Codes/parser/t.p=
+asc">t.pasc</A>=20
+      | <A=20
+      =
+href=3D"http://www.personal.kent.edu/~rmuhamma/Compilers/Codes/parser/tab=
+le.c">table.c</A>=20
+      | <A=20
+      =
+href=3D"http://www.personal.kent.edu/~rmuhamma/Compilers/Codes/parser/tes=
+t.pasc">test.pasc</A>=20
+      | <A=20
+      =
+href=3D"http://www.personal.kent.edu/~rmuhamma/Compilers/Codes/parser/tre=
+e.c">tree.c</A>=20
+      | <A=20
+      =
+href=3D"http://www.personal.kent.edu/~rmuhamma/Compilers/Codes/parser/tre=
+e.h">tree.h</A>=20
+      | <A=20
+      =
+href=3D"http://www.personal.kent.edu/~rmuhamma/Compilers/Codes/parser/tre=
+e.type">tree.type</A>=20
+      .</TD></TR>
+  <TR>
+    <TD>
+      <CENTER>Pasc </CENTER></TD>
+    <TD><A=20
+      =
+href=3D"http://www.personal.kent.edu/~rmuhamma/Compilers/Codes/pasc/c3">c=
+3</A>=20
+      | <A=20
+      =
+href=3D"http://www.personal.kent.edu/~rmuhamma/Compilers/Codes/pasc/error=
+.pasc">error.pasc</A>=20
+      | <A=20
+      =
+href=3D"http://www.personal.kent.edu/~rmuhamma/Compilers/Codes/pasc/hello=
+.pasc">hello.pasc</A>&nbsp;=20
+      | <A=20
+      =
+href=3D"http://www.personal.kent.edu/~rmuhamma/Compilers/Codes/pasc/p4">p=
+4</A>=20
+      | <A=20
+      =
+href=3D"http://www.personal.kent.edu/~rmuhamma/Compilers/Codes/pasc/r5">r=
+5</A>=20
+      | <A=20
+      =
+href=3D"http://www.personal.kent.edu/~rmuhamma/Compilers/Codes/pasc/s1.pa=
+sc">s1.pasc</A>=20
+      | <A=20
+      =
+href=3D"http://www.personal.kent.edu/~rmuhamma/Compilers/Codes/pasc/s2.pa=
+sc">s2.pasc</A>=20
+      | <A=20
+      =
+href=3D"http://www.personal.kent.edu/~rmuhamma/Compilers/Codes/pasc/s6">s=
+6</A>=20
+      | <A=20
+      =
+href=3D"http://www.personal.kent.edu/~rmuhamma/Compilers/Codes/pasc/seman=
+_correct.pasc">seman_correct.pasc</A>=20
+      | <A=20
+      =
+href=3D"http://www.personal.kent.edu/~rmuhamma/Compilers/Codes/pasc/seman=
+_error.pasc">seman_error.pasc</A>=20
+      | <A=20
+      =
+href=3D"http://www.personal.kent.edu/~rmuhamma/Compilers/Codes/pasc/sieve=
+.pasc">sieve.pasc</A>=20
+      .</TD></TR>
+  <TR>
+    <TD>
+      <CENTER>Semantic </CENTER></TD>
+    <TD><A=20
+      =
+href=3D"http://www.personal.kent.edu/~rmuhamma/Compilers/Codes/semantic/d=
+river3.c">driver3.c</A>=20
+      | <A=20
+      =
+href=3D"http://www.personal.kent.edu/~rmuhamma/Compilers/Codes/semantic/l=
+exer.l">l&nbsp;=20
+      exer.l</A> | <A=20
+      =
+href=3D"http://www.personal.kent.edu/~rmuhamma/Compilers/Codes/semantic/m=
+akefile">makefile</A>=20
+      | <A=20
+      =
+href=3D"http://www.personal.kent.edu/~rmuhamma/Compilers/Codes/semantic/p=
+arser.y">parser.y</A>=20
+      | <A=20
+      =
+href=3D"http://www.personal.kent.edu/~rmuhamma/Compilers/Codes/semantic/s=
+eman.c">seman.c</A>=20
+      | <A=20
+      =
+href=3D"http://www.personal.kent.edu/~rmuhamma/Compilers/Codes/semantic/s=
+eman.txt">seman.txt</A>=20
+      | <A=20
+      =
+href=3D"http://www.personal.kent.edu/~rmuhamma/Compilers/Codes/semantic/s=
+eman.h">seman.h</A>=20
+      | <A=20
+      =
+href=3D"http://www.personal.kent.edu/~rmuhamma/Compilers/Codes/semantic/t=
+1">t1</A>=20
+      | <A=20
+      =
+href=3D"http://www.personal.kent.edu/~rmuhamma/Compilers/Codes/semantic/t=
+2">t2</A>=20
+      | <A=20
+      =
+href=3D"http://www.personal.kent.edu/~rmuhamma/Compilers/Codes/semantic/t=
+3">t3</A>=20
+      | <A=20
+      =
+href=3D"http://www.personal.kent.edu/~rmuhamma/Compilers/Codes/semantic/t=
+4">t4</A>=20
+      | <A=20
+      =
+href=3D"http://www.personal.kent.edu/~rmuhamma/Compilers/Codes/semantic/t=
+5">t5</A>=20
+      | <A=20
+      =
+href=3D"http://www.personal.kent.edu/~rmuhamma/Compilers/Codes/semantic/t=
+able.c">table.c</A>|=20
+      <A=20
+      =
+href=3D"http://www.personal.kent.edu/~rmuhamma/Compilers/Codes/semantic/t=
+raverse.c">traverse.c</A>=20
+      | <A=20
+      =
+href=3D"http://www.personal.kent.edu/~rmuhamma/Compilers/Codes/semantic/t=
+raverse.c.bak">traverse.c.bak</A>=20
+      | <A=20
+      =
+href=3D"http://www.personal.kent.edu/~rmuhamma/Compilers/Codes/semantic/t=
+raverse.c.bak1">traverse.c.bak1</A>=20
+      | <A=20
+      =
+href=3D"http://www.personal.kent.edu/~rmuhamma/Compilers/Codes/semantic/t=
+ree.c">tree.c</A>=20
+      | <A=20
+      =
+href=3D"http://www.personal.kent.edu/~rmuhamma/Compilers/Codes/semantic/t=
+ree.h">tree.h=20
+      </A>.</TD></TR>
+  <TR>
+    <TD rowSpan=3D2>
+      <CENTER>Code Generation</CENTER></TD>
+    <TD><A=20
+      =
+href=3D"http://www.personal.kent.edu/~rmuhamma/Compilers/Codes/code_gen/d=
+river4.c">driver4.c</A>=20
+      | <A=20
+      =
+href=3D"http://www.personal.kent.edu/~rmuhamma/Compilers/Codes/code_gen/e=
+mit.c">emit.c</A>=20
+      | <A=20
+      =
+href=3D"http://www.personal.kent.edu/~rmuhamma/Compilers/Codes/code_gen/g=
+en.c">gen.c</A>=20
+      | <A=20
+      =
+href=3D"http://www.personal.kent.edu/~rmuhamma/Compilers/Codes/code_gen/i=
+o.c">io.c</A>=20
+      | <A=20
+      =
+href=3D"http://www.personal.kent.edu/~rmuhamma/Compilers/Codes/code_gen/p=
+roj4.c">proj4.c</A>=20
+      | <A=20
+      =
+href=3D"http://www.personal.kent.edu/~rmuhamma/Compilers/Codes/code_gen/s=
+eman.c">seman.c</A>=20
+      | <A=20
+      =
+href=3D"http://www.personal.kent.edu/~rmuhamma/Compilers/Codes/code_gen/t=
+able.c">table.c</A>=20
+      | <A=20
+      =
+href=3D"http://www.personal.kent.edu/~rmuhamma/Compilers/Codes/code_gen/t=
+raverse.c">traverse.c</A>=20
+      | <A=20
+      =
+href=3D"http://www.personal.kent.edu/~rmuhamma/Compilers/Codes/code_gen/t=
+ree.c">tree.c</A>=20
+      | <A=20
+      =
+href=3D"http://www.personal.kent.edu/~rmuhamma/Compilers/Codes/code_gen/e=
+mit.h">emit.h</A>=20
+      | <A=20
+      =
+href=3D"http://www.personal.kent.edu/~rmuhamma/Compilers/Codes/code_gen/s=
+eman.h">seman.h</A>=20
+      | <A=20
+      =
+href=3D"http://www.personal.kent.edu/~rmuhamma/Compilers/Codes/code_gen/t=
+ree.h">tree.h</A>=20
+      | <A=20
+      =
+href=3D"http://www.personal.kent.edu/~rmuhamma/Compilers/Codes/code_gen/m=
+akefile">makefile</A>=20
+      | <A=20
+      =
+href=3D"http://www.personal.kent.edu/~rmuhamma/Compilers/Codes/code_gen/p=
+arser.y">p=20
+      arser.y </A>| <A=20
+      =
+href=3D"http://www.personal.kent.edu/~rmuhamma/Compilers/Codes/code_gen/l=
+exer.l">lexer.l=20
+      </A>. </TD></TR>
+  <TR>
+    <TD><B>test:</B> <A=20
+      =
+href=3D"http://www.personal.kent.edu/~rmuhamma/Compilers/Codes/code_gen/t=
+est/c3">c3=20
+      </A>&nbsp;| <A=20
+      =
+href=3D"http://www.personal.kent.edu/~rmuhamma/Compilers/Codes/code_gen/t=
+est/c3.txt">c3.txt</A>=20
+      | <A=20
+      =
+href=3D"http://www.personal.kent.edu/~rmuhamma/Compilers/Codes/code_gen/t=
+est/p4">p4</A>=20
+      | <A=20
+      =
+href=3D"http://www.personal.kent.edu/~rmuhamma/Compilers/Codes/code_gen/t=
+est/p4.txt">p4.txt</A>=20
+      | <A=20
+      =
+href=3D"http://www.personal.kent.edu/~rmuhamma/Compilers/Codes/code_gen/t=
+est/r5">r5=20
+      </A>| <A=20
+      =
+href=3D"http://www.personal.kent.edu/~rmuhamma/Compilers/Codes/code_gen/t=
+est/r5.txt">r5.txt</A>=20
+      | <A=20
+      =
+href=3D"http://www.personal.kent.edu/~rmuhamma/Compilers/Codes/code_gen/t=
+est/s6">s6</A>=20
+      | <A=20
+      =
+href=3D"http://www.personal.kent.edu/~rmuhamma/Compilers/Codes/code_gen/t=
+est/s6.txt">s6.txt</A>=20
+      . </TD></TR></TBODY></TABLE></CENTER>
+<P>&nbsp;</P>
+<UL>
+  <LI><A href=3D"http://www.cs.kent.edu/~batcher/"><FONT size=3D4>Dr. K. =
+E.=20
+  Batcher's</FONT></A><FONT size=3D4> - </FONT><A=20
+  href=3D"http://www.cs.kent.edu/~batcher/CS673111/index.html"><FONT=20
+  size=3D4>"Compilers Lecture Notes"</FONT></A> </LI></UL>
+<P>&nbsp;</P>
+<P></P>
+<H3><IMG =
+src=3D"http://www.personal.kent.edu/~rmuhamma/Maingif/bluecube.gif"=20
+width=3D18 height=3D18> Related Links </H3>
+<UL>
+  <LI><A href=3D"http://www.idiom.com/free-compilers/" =
+target=3D_blank><FONT=20
+  size=3D4>Catalogue of Free Compilers and Interpreters</FONT></A> -- =
+freely=20
+  available software for&nbsp; compilers, compiler generators, =
+interpreters,=20
+  translators, important libraries, assemblers and etc.=20
+  <LI><A =
+href=3D"http://ou800doc.caldera.com/SDK_cprog/CTOC-CLangCompilers.html"=20
+  target=3D_blank><FONT size=3D4>C language Compiler</FONT></A><FONT =
+size=3D4> </FONT>
+  <LI><A href=3D"http://www.compilers.net/" target=3D_blank><FONT=20
+  size=3D4>Compilers.net</FONT></A>=20
+  <LI><A href=3D"http://solon.cma.univie.ac.at/~neum/glopt.html"=20
+  target=3D_blank><FONT size=3D4>Global Optimization</FONT></A><FONT =
+size=3D4> </FONT>
+  <LI><A href=3D"http://gcc.gnu.org/onlinedocs/gccint/" =
+target=3D_blank><FONT=20
+  size=3D4>GNU Compiler Collection (GCC) Internals</FONT></A><FONT =
+size=3D4> </FONT>
+  <LI><A =
+href=3D"http://www.la.utexas.edu/lab/software/devtool/gcc-docs.html"=20
+  target=3D_blank><FONT size=3D4>Documentation for the GCC Compiler=20
+  Collection</FONT></A>=20
+  <LI><A href=3D"http://www.cs.princeton.edu/software/lcc/" =
+target=3D_blank><FONT=20
+  size=3D4>lcc, A Retargetable Compiler for ANSI C</FONT></A><FONT =
+size=3D4> </FONT>
+  <LI><A href=3D"http://www.netti.fi/~simos/oasis/" =
+target=3D_blank><FONT=20
+  size=3D4>Programmer's Oasis</FONT></A> -- Contains links to various =
+programming=20
+  language Web sites as well as compilers and translators, newsgroups,=20
+  organizations and standards, Windows family programming, algorithms =
+and data=20
+  structures, news, and other sites of interest to programmers.=20
+  <LI><A=20
+  =
+href=3D"http://www-2.cs.cmu.edu/afs/cs.cmu.edu/user/mleone/web/language-p=
+eople.html"=20
+  target=3D_blank><FONT size=3D4>Researchers in Programming Languages =
+and=20
+  Compilers</FONT></A> -- home pages of researchers working on =
+programming=20
+  language theory, design, implementation, and related areas.=20
+  <LI><A=20
+  =
+href=3D"http://www.cs.cmu.edu/afs/cs.cmu.edu/user/mleone/web/language-res=
+earch.html"=20
+  target=3D_blank><FONT size=3D4>Resources for Programming Language=20
+  Research</FONT></A> -- A collection of links to resources for research =
+in=20
+  programming language theory, design, implementation, and related =
+areas. This=20
+  site also includes language overviews with access to language specific =
+sites,=20
+  bibliographies, publications, and conferences. </LI></UL>
+<P>&nbsp;</P>
+<H3><IMG =
+src=3D"http://www.personal.kent.edu/~rmuhamma/Maingif/bluecube.gif"=20
+width=3D18 height=3D18> Books, Notes and Tutorials </H3>
+<UL>
+  <LI><A href=3D"http://www.scifac.ru.ac.za/compilers/" =
+target=3D_blank><FONT=20
+  size=3D4>Compilers and Compiler Generators an introduction with=20
+  C++</FONT></A>&nbsp; -- on-line edition of the text and other material =
+from=20
+  book "Compilers and Compiler Generators - an introduction with C++" by =
+P.D.=20
+  Terry.=20
+  <LI><A =
+href=3D"http://www.personal.kent.edu/~rmuhamma/Compilers/compnotes.html" =
+
+  target=3D_blank><FONT size=3D4>Compiler Notes</FONT></A> -- by Clinton =
+L. Jeffery.=20
+
+  <LI><A href=3D"http://www-courses.cs.uiuc.edu/~cs326/html/notes.html"=20
+  target=3D_blank><FONT size=3D4>CS-326 - Notes</FONT></A>&nbsp; =
+Compiler=20
+  Construction -- The Computer Science Instructional Laboratory.=20
+  <LI><A =
+href=3D"http://www.personal.kent.edu/~rmuhamma/Compilers/compreview.html"=
+=20
+  target=3D_blank><FONT size=3D4>Comprehensive Compilers =
+Review</FONT></A> -- by=20
+  Sreekanth Nagarajan.=20
+  <LI><A href=3D"http://compilers.iecc.com/crenshaw/" =
+target=3D_blank><FONT=20
+  size=3D4>Let's Build a Compiler, by Jack Crenshaw</FONT></A> -- =
+non-technical=20
+  introduction to compiler construction.=20
+  <LI><A href=3D"http://www.first.gmd.de/gccs/" target=3D_blank><FONT =
+size=3D4>Online=20
+  Book The GENTLE Compiler Construction System</FONT></A> </LI></UL>
+<P>&nbsp;</P>
+<H3><IMG =
+src=3D"http://www.personal.kent.edu/~rmuhamma/Maingif/bluecube.gif"=20
+width=3D18 height=3D18> News Groups </H3>
+<UL>
+  <LI><A href=3D"http://compilers.iecc.com/" target=3D_blank><FONT=20
+  size=3D4>comp.compilers newsgroup</FONT></A> -- with full text search =
+for=20
+  articles. </LI></UL>
+<P>&nbsp;</P>
+<CENTER><BR>&nbsp;=20
+<CENTER>
+<P><IMG =
+src=3D"http://www.personal.kent.edu/~rmuhamma/Maingif/redline.gif"=20
+width=3D640 height=3D2> <BR>&nbsp;=20
+<P><I><B><FONT size=3D4>There is no place like</FONT> <A=20
+href=3D"http://www.cs.kent.edu/~rmuhamma/"><IMG border=3D0 =
+align=3Dmiddle=20
+src=3D"http://www.personal.kent.edu/~rmuhamma/Maingif/house.gif" =
+width=3D49=20
+height=3D47></A> <A href=3D"http://www.cs.kent.edu/~rmuhamma/"><FONT=20
+size=3D4>Home</FONT></A></B></I></CENTER></P></CENTER></BODY></HTML>
+
+------=_NextPart_000_0055_01CB5975.E1D8AB30
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://www.personal.kent.edu/~rmuhamma/Maingif/redline.gif
+
+R0lGODdhgAIEAPYAAAAAAEMDA0YDA04DA1YEBFkEBGEEBGgEBG8FBXMFBXoFBX0FBYQGBogGBosG
+Bo4GBpEGBpUHB5gHB5sHB54HB6EHB6QHB6cICKoICK0ICLAICLUJCbgJCbsJCcAJCcUKCsoKCswK
+Cs4KCtAKCtMLC9cLC9sLC9wLC+AMDOIMDOUMDOgNDeoNDesNDewNDe4ODu8ODvAODvIODvMPD/QP
+D/UQEPQQEPEODt4MDNkLC9ULC8cKCr0JCbMICPIREe8SEuwSEukTE+UTE+IUFN8UFNoUFNcVFdMV
+Fc8VFc4WFsoWFsgWFsYWFsQWFsMXF8EXF78XF70XF7sXF7kXF7gYGLYYGLIYGLAYGK8YGK0ZGaoZ
+GagZGaYZGaUaGqIaGqEaGp8aGp4aGp0bGwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACwA
+AAAAgAIEAAAH/oAAgoOEhYaHiImKi4yNjo+QkZKTlJWWl5iZmpucnZ6foKGio4sBpgECqQOrrASu
+BAWxBrMGB7a3CLkJCQoKC7+/DMIMDcUNDsgPDxDMERES0BPSFBQV1hYWFxcY3BgZGRrhGxscHB3n
+HukeH+wfICAh8SIiI/UkJCX5JvsnJyj/KVKoULGiIIuDLRK6cPHiBYyHMWLImEhxhkWLNDJq3Kix
+hkePNkKKHEmypMiNJD+q5Miy5cWXFylOvHEjYoyHMBq+WLgwYYuDQAsKHUg0YIp/OHD067cvh9N8
+OnTcI1Fv3rx473ZoZZeOh9dzYDuM60E2XDdu2NJasMbWGrW3/m+lyZ1LF5rdu3jz6o02gVpbbNq2
+YQhHeFw5c+e8qkvXTuu7x5AjS55MubLlyFbvOV0aUOiKhA0rzshY0ofpHz+AAAnCWoiQIbCJyC5C
+24iRI0eQ6E6SRIlvJUuWMGHSpLgTJ0+eQFm+PIrzKFKiS5cyZQqV61WyW9m+/coVLOCzZNGiZYv5
+LVy4dFnvxcuXL2DihwkjRtApVKpYrXoFSxatW7jowosvwCwwDDHGIOOAMsxA4Ixdcvl1TTaCcfNN
+YeQg1sFi7bgDjzz02IOPPvz4A5BABBmEkEIMOQSRRDLJAFNLLKlUg0k45ojSSDZ6ROOPNMAEU4w0
+2YSTTjy5suATUAd5tgJRAxmFlFJLNfVUCVFNVZVVWIGg1Q5ceeAVD2GdM1ZZGpyFgVrYtMUWXHDR
+Jadce9VpJ18SThgYN4SJk6GGinHIjmOXFWrooZRlRsJm/XQmFGgviEYaSab5gJpqrAXhGmxDyEYE
+bUXYhptuSPD2G3DCEWcccsoxB8Vz0E0XXXXXUZFdFdx1911445V3XnrrddHee/GBMV99pCSr7LLM
+Nuvss9BGK+201FYbbSAAOw==
+
+------=_NextPart_000_0055_01CB5975.E1D8AB30
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://www.personal.kent.edu/~rmuhamma/MainButtons/compiler-btn.gif
+
+R0lGODdhsQA8AP8AAACA/wBq1Ym8/qHO/min/nS1/hWK/yxp+TV7+V6g/EWF/laZ/U6S/gMBApK7
+55vH9foAAXCu9WGb62cAAUUAAWGY1SNY+ZfB7ouy24ar0yYAAhgAATcBAkRplbgAAccAAXcBAmql
+6OYBAkt1pdcAAYOnzgkNEoYAAXyp5ik1Q6PB7nKc1FUAAaW65ZqUyFVrhVWM86ijyYu05aSOwBUb
+IyQqNVqV5nai212SzVuS2rScwZCx8EFjixIWHDZFVaoCA1iN1nSJtHSVuFdwits1RD1QZ7aIqKas
+1HWbx6ZdfO0TGvUMEWqHpxwmM5il2pyb0VOCt154lEhddXdSckQcJSNb60NUaUxienQjLYVacoCq
+5pYbJCRXz2KHty1o0qOy3EVegGqRxJqIqLlnhnsRGTdTdUh67OocJQwRGH6iyIwMEOAzPzJAT6iX
+u8djeslVabt6mIEqQZE0RY2VxncqNlaIxSYxPZKr5ytl54tmhqWHt0yE1jdKZbVieakqNi4PFodK
+ZGo/Wco6VC4hL5gCBBsjLER70JmGtad5pnZ6l+YME0gRF0uJ6WJ9muYiK2lqkMhLZaVEVmMpNTcZ
+I/ETGrWStTgTGWQiK9oSGNQbKMJzjilYrdJSZkBsq5hzmaZ2mlEMEzsMEIqEum4NETJViZZFW4dG
+VstbcSIvQKdmiHBquZd5p9dPYlJ/s9NHWUl3t+MrNVsXHquCob4WG7gMEE1KXJ6y3EQhLaofKoMc
+IjxikCcSFx1DiHdBVVqF50EMELQ/Vc0WIskRHIeKqmAyPixBWomLw4eZ1ZhedXo6S5iMwapMZ7ND
+V4iStLKjyTMsPKWZxRsuTL2AnpiVuJOiyCw9U16ArocWH212zWNGiGhkh405UK86WYwyRpYVGypE
+Z2YzYlBnf3Y2VVImMHQbJFptlFl6pTJz6XtnfzllqL0+TY15pIF6uJBvicJGVpNchrNzjoN7wrBt
+lKVOgq1ehJtYbYJof5lHdrk8ZYpUaMM8S9U/VdAtN7hZbrdedAAAACwAAAAAsQA8AAAI/wABCBxI
+sKDBgwgTKlzIsKHDhxAjSiwYYOLEiRMnTpw4cSLBAAEmTpw4ceLEiRMnDgwQIMDEiRMnTpw4ceJE
+gQECBAgwceLEiRMnTpw4EQDAAAIFAgQgUCBAAwIHEixo8CDChAoXMmzo8CHEiA4BBhAoECAAgQIN
+AAwgcCDBggYPIkyocCHDhg4fQoy4EICBggABCBRoAGAAgQMJFjR4EGFChQsZNnT4EGJEhQAAGCgI
+EIBAgQYABhA4kGBBgwcRJlS4kGFDhw8hRkwIAAAAAwUBAhAo0ADAAAIHEixo8CDChAoXMmzo8CHE
+iAgBAAAAwEBBgAAECjQAMIDAgQQLGv88iDChwoUMGzp8CDHiQYAABAo0ADCAQIEAAQgUaABgAIEC
+LViwcOAAAgQIEChQoIDBggULEiRIkIBAggQACQgcSLCgwYMIEypcyLChw4MJEiRIsGABAwYMFChA
+gAABggMHDliwABCAQIEGAAYQKBAgAIECDQAMIFCgBQsHDhw4gACBAgUMGDBYsCBBggQJABIQOJBg
+QYMHESZUuJBhQ4cMEyRIkGDBggUMGChQgADBgQMHDliwABCAQIEGAAYQKBAgAIECDQAMIFCghQMH
+DhxAgECBAgUMFixYkCABQAICBwIsIFAgAYAFBA4kWNDgQYQJFS5k2NAggYEECAwkQID/QAICCRIk
+WLCAAQMFChQgQHDggAULAAEIFGgAYACBAgECECjQAMAAAgVasHDgAIIDCBQoYMCAwYIECQgQIEAg
+xCdBmYIFyyQo1TECBQoUIFCgQAECBQoUIFCgQAECBQoUIFCgQAECBQoUIFCgQAECBQoUIFCgQAEC
+BQoUIFCgQIECBAoUKECgQIECBAoUKECgQIECBAoUKECgQIECBAoUKECgQIECBAoUKECgQIECBAoU
+KECgQIECBQgUKFCAAAECBQoQIECAQIIECxYwYKBAAQIEBw4cOGABIACBAg0ADCBQIEAAAgUaABhA
+oEALBw4cQIBAgQIFDBYsSJCAAIEC/wU8KTrBoUEDE2g2cADhBxHAAgIFChAgYKBAAQIEDBQoQICA
+gQIFCBAwUKAAAQIGChQwsIAAAQIGChQgQMBAgQIECBgoUIAAAQMFChAgYKBAAQIECBg4cOBAgQQI
+JEiQYAEDBgoUIEBw4MABCwABCBRoAGAAgQIBAhAo0ADAAAIFWjhw4AACBAoUMFiwIEECAgQKEKDn
+YYOJMnUEFBBQIASUMrewuEDhBEWBAgIECCggoECBAgIECCggoECBAgIECCggoECBAgIECCggoECB
+AgIECCggoEABAQUEFChQQIAAAQUEFChQQIAAAQUEFChQQIAAAQUEFChQQIAAAQUEFP8oUECAAAEF
+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
+OHHixIkTJy4MCAA7
+
+------=_NextPart_000_0055_01CB5975.E1D8AB30
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://www.personal.kent.edu/~rmuhamma/Maingif/blueball.gif
+
+R0lGODlhDQANAMIAABUFF5656cbGxP///4V+g05d/AAAAAAAACH5BAEAAAIALAAAAAANAA0AAAMz
+KLrcQiAC4qQFDIZhC1XREEhFgYEXUJ5CWgTmd73wpEAqHX9t6UeE4AIHDPIyRqFjuEgAADs=
+
+------=_NextPart_000_0055_01CB5975.E1D8AB30
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://www.personal.kent.edu/~rmuhamma/Maingif/bluecube.gif
+
+R0lGODdhEgASAMQAAP////j5/Pf3/PX2+/Ly+u7v+eLj7uDh8dbW57y+15ea3oGF2GJnsVBVpkRN
+zEJImjU6rjM2gyMpqSEkdwoVowQLaAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACwAAAAA
+EgASAAAFaOCwOGRpmkrRGOPpKof0rK1LwhL1zKzt4BTdjvaKBYXDXgl43DmJP+MR+WQxp85sI0DI
+TYNZJ4MggHzBYUZiEkGYv+l1pdJ+N8XyOd2N3aknenp1d3+BgYM6hYaHfIqLjBAFgI+LEQMhADs=
+
+------=_NextPart_000_0055_01CB5975.E1D8AB30
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://www.personal.kent.edu/~rmuhamma/Maingif/house.gif
+
+R0lGODlhMQAvAPcAAP7//d7w+rhLLTm8S+fn59jq9AICA1JSVOr4/+Du+bjExtzu997s95OFYlFR
+TzAxHqWlqIQxDvL5/h+1MKKlpeT2/+bm5pSEYvn8/ubo54UxEWJoauXx+SK1MOTy/ebn6VJSUuj0
+/y8wIZBKL09TUqSkpOby/ubw/BkZGSG0L1JSUOz6/6SkovH3++Lw+9rs9uTw/Lallfz+/+nz+2hv
+ZlNRUpWDZVJQU3NyeqOkp9zq9aajpTEyJO79/9rw+IOFleb4/+bz/OTu+iKzMSC1M3Vzevz9/ufn
+5TEvIYWEkqakp4WElEdHOYaClufx/ejo6FBSUHJ0ed7q9pLaqJODYvf7/YIyEIOFkiK1M+j1/CC2
+MPX5+1RVVlJVUPT4/O/4/zIwI+72/Oz0/FtdVJaDYtjm8er0+kBDRP/9/vn7/uz4/+z3/zU3Ouz1
+/DAyIuHt+JSFZDAyH9bk74SDkrVCIPP7/ur8/+j6/+r3/uv1/eb0/XRyfXV0fTMxIjs6Lv3//Pb7
+/kpMTuPy+9/r911eXnzUk1JTVqWmoSS1NOHv+uPx/DAxIeXz/t/t+DIwIf/+/+n3/+f1/+j2/+b0
+/zAxI93r9v7//+Dy/OL0/uHz/VFTUaWlpVFRUeP1/6SmpTIxH/7+/qSmo6Wlo+P0/tro8yG0MP//
+/ejm6efo41NQUN/x+3NzfOLz/TQxJOLu+v7+/3F0fN/z/KampKamqIKDleXn5ufl5ji+STi9R+fz
+/+X3/4CJh4o8HZODXy4xNZGDZpOEZaSvtOn1/uLv+X2DfyGzNCK3NjU2JeDv+FFSVG1ucbtkSh0e
+HjAzIufp6DM2JmFjYzU0IoMwERARFHp/elPHZuH1/suRhHR4e6eopq+4viC2M0K/VlRSUu/3/Yc2
+GOPn5lVXWVVbXwkKCuLx+VVXVSQjJVlYWDo/QTQ2KHR1ejU4KN3v+d3x+tzy+jY4J+j5/ysuMu74
+/erm44yVl+71/N7w+YPWmYUxE4U0E4c2F+Hy/AAAAgABAP///wAAACH5BAAAAAAALAAAAAAxAC8A
+AAj/AKUMghHCiRBJkiK5YNBo0ooVkxIwSOAiUYJKknpA8jAJkiQdlVxIeijJg8RIkColQICAlI4E
+b1x5yOXkRCQPiRo1chEJASRGiRgwTJBghhFogIJMYtnIA6SfLlx4cNEoRCQGiXwq2urBRC6aJ4BW
+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
+
+------=_NextPart_000_0055_01CB5975.E1D8AB30
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://www.personal.kent.edu/~rmuhamma/Maingif/Bck2.gif
+
+R0lGODlhMgAyALMAAOjk/+rs/Njo/vD3/OX4/tb4/tX+9OX+9QAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAACwAAAAAMgAyAAAE/xAMcegYRRBydgCEIAZHQWCbeB5dZlxC0amEGQRDUNxAUF8FgGogHLBu
+hEAMOMkIQALSASea+AREZ5Sy8xRxt1v2ZAhplBRNt3zadEChXqxjlD2tPdSToszUDkIAAAZCJgcv
+FT4AB0YfgTcaUTpwJESCkRU7mQNJnBJ8IRNYBUEiJhh+pAFlTotIOaRbWAIvAAUYaTlJGidXbbcY
+nCKmQ5NWJ4WcGTu3ISQhZpxlxllbBsA1IZpRLzujtomMOCBGnBwmpEFo6423trRCLH4EBh+HgDNx
+fmBmIFMxNWL0IKGGgJAt0GIoSdJD1QVO5qLIIHVOyLUeU7z5SBQPx0Q/Uf9yRLElCpm3EhoMxChg
+4N8ygDx2VYGkY8MuVWZ8MBShUoQtLXOUvOMlg56OSGp8aKlxC0uvTLRCMEr4JJaQKxPMlBmVZhYd
+iaWcjRCSZBUpQLdKTGBRT5zBmnAK0cOoxNytDzkWSfiwAUWInndwnRhQTyGFP7RGnBlVgZAkP2RF
+LV2o8sMwDbaScHCDbnG2oxSVwkjS7AenFmGCnOLy5OiHdQEnmNN8NcpmOFUtj7iwUIkOFis4+UbD
+CxKWHFNKkGV6Yp+Jc+guldBBWBOhDFM4+P6KYTqJpjXe/UTewYxPOwAPGmCFXdWVhc+voTlXk1EF
+ZYwqK8yQOqRvVfUwo8H/BYLYRFAFIzS3DEU7UIeENovk0JJNrSwzhUolRPOETdBQFEiHg62UnSh9
+eKUDCevNoZJFq9Q1ywTXAGQCKIIwYpFBWNygVnF9KULLjAZFZ44oORw1CAhI0nDBNX3NqAdpw5AC
+hUg3rfSCSiqVdVkQyGBGBBczXqKSk7qkkN8TtniEyQ07ZOUNFhZ96WYVKimjDVPJSYJBjKsc8cJb
+REAJlkRtpHDCLBQQAgKX9ChEWHlZ8QZQCRkQAdEiU1gBy3xNFEdMQvChwkEdW83EyDA/mcIXgt7w
+Ng+dPmXHUy/x8aScNlVxUE8NBxLEH394sTQMh3jZAgISglCRAVlTDWtQ/wvpXDDFiQYdFAMvuOxa
+F0EqoLFND465I4FRLW44wVVI5OgUdldE4gpJpYDHZRESnHTtFguRVcx6H2x1qKamzMjgc+8ltSF1
+UXJQYJZorWpQc40ItMxD6hDGZhll1kNWM4mEBsoo0mwRj0BCMdlFRi35sB4zgGjDEpL7rEJBCeWl
+wN+A/X6SzS2pqIWhqA2V4ikO//SAkXBYtHShau4oRAVKMhDmqAdlxXIbmgsxdcaxxBRST2+WbkDW
+inwNMw11vCpFSQc8uGabBOeu94Ovvp1zh0T+WHiBVDkQ6VcTv57Gy0FnArQzIIuaggua85iBJz0V
+aHOIhWKsBJDlO0Lk0FWAp0BjdJi8SFJnEOLI9rBNh6EihxGRLNOGcNBg8AE6vA6YxAxbEMGGSGLI
+cAQkmgyUQmJYy16XB4Ovc9AnqpqTmUTAsfSC7Gc8xwwVWWoT4w/DABEBADs=
+
+------=_NextPart_000_0055_01CB5975.E1D8AB30
+Content-Type: text/css;
+	charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://www.personal.kent.edu/~rmuhamma/mainLink.css
+
+A:link {
+	MARGIN: 1px; COLOR: #0000ff; TEXT-DECORATION: none
+}
+A:visited {
+	MARGIN: 1px; COLOR: #0000ff; TEXT-DECORATION: none
+}
+A:active {
+	MARGIN: 1px; COLOR: #0000ff; TEXT-DECORATION: none
+}
+A:hover {
+	BORDER-BOTTOM: #0000ff 1px solid; BORDER-LEFT: #0000ff 1px solid; =
+MARGIN: 0px; BORDER-TOP: #0000ff 1px solid; BORDER-RIGHT: #0000ff 1px =
+solid; TEXT-DECORATION: none
+}
+
+------=_NextPart_000_0055_01CB5975.E1D8AB30--
