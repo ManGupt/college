@@ -1,0 +1,146 @@
+========= QUICK ==========
+void swap(int arr[], int left, int right) {
+    int tmp = arr[left];
+    arr[left] = arr[right];
+    arr[right] = tmp;
+}
+
+int part(int arr[], int left, int right) {
+    int part = left + (right - left)/2;
+    int p = arr[part];
+    while (left < right) {
+        while (arr[left] < p) left++;
+        while (p < arr[right]) right--;
+        if (left >= right) break;
+        swap(arr, left, right);
+    }
+    return left;
+}
+
+void qsort(int arr[], int left, int right) {
+    if (left < 0 || left >= right) return ;
+    int p = part(arr, left, right);
+    qsort(arr, left, p-1);
+    qsort(arr, p+1, right);
+    return;
+}
+========= QUICK ==========
+
+========= MERGE ==========
+
+========= MERGE ==========
+
+int count(int arr[], int n, int t) {
+    int c = 0;
+    for (int i = 0; i < n-2; ++i) {
+        int sum = 0;
+        int left = i+1;
+        int right = n-1;
+        while (left < right) {
+            sum = arr[i] + arr[left] + arr[right];
+            //cout << sum << endl;
+            if (sum > t) {
+                right--;
+            } else {
+                c+=right-left;
+                left++;
+            }
+        }
+    }
+    return c;
+}
+==========================================
+There are three levels at which a developer can operate during software development.
+
+How
+
+First Level or basic level is when someone is told what needs to be done. He/She does what is told. At this level the design is handed over to you and you are just implementing someone else’s design without fully understanding implications of design.
+
+Change Area :– Implementation. Software Design is fixed but implementation is altered by team.
+
+Example :– Software company is provided with design documents with object class specifications and asked to implement the software.
+
+What
+
+Second Level or intermediate level is when someone is given a requirement and allowed to design and implement the software without major restrictions on how the requirement is designed or implemented. At this level developer is given freedom to choose different implementation options which achieve the desired requirement.
+
+Change Area :– Software Design and Implementation. Requirements is not allowed to change by team.
+
+Example :– Software company is provided with use case documents or requirement documents and asked to implement the software according to specifications given in requirement documents.
+
+Why
+
+Advanced Level is when someone understands the business goals of the application and is allowed to choose requirements, design and implementation to achieve the business goal. As Project Managers, Product Owners, Analysts and Developers start working on designing/implementing features and requirements, they understand the business goals and why something is being build.
+
+Change Area :– Software Requirements, Design and Implementation. Business goal can not be changed by team.
+
+Example :– Project team is formed with co-sourced members of business and software company and Teams goes through Inception process. During Inception process, the team gains first hand understanding of business goals and how they relate to features/requirements.
+
+-----------------
+
+While working on a solution for a problem, we try to find a solution which works in all conditions or situations. There are egos built-up on which solution is better or solves all the problems. But rarely have I seen a solution which fixes the problem completely with-out any side effects.
+
+What usually happens is we
+
+    move the problem (or issue) from one area to other area.
+
+    Example :– In database normalisation we improve performance of add/update by normalising but causing read performance issues.
+
+    solve one problem at the cost of introducing another problem.
+
+    Example :– We introduce redundancy to gain retrieval performance at the cost of multiple updates (due to redundancy).
+
+This shows that problems are not really solved but just moved around or converted to a different problem.
+
+But we still find and use solutions you might say. Yes, we do and we do it by trading off one type of problem to another type of problem.
+
+So the Art of finding a solution to a problem is identifying problems you are willing to live-with and problems you can not compromise on.
+
+In fact, I have found different solutions by just compromising on a dimension of existing solution and to find a new solution.
+
+--------------
+Make sure what ever you do in your current job understand clearly why you are doing that way, what are the design considerations, trade offs, customer/user interest
+
+
+Design election commission architecture : Let's say we work with the Election Commission. On Counting day, we want to collate the votes received at the lakhs of voting booths all over the country. Each booth has a voting machine, which, when connected to the network, returns an array of the form {[party_id, num_votes],[party_id_2, num_votes_2],...}. We want to collect these and get the current scores in real time. The report we need continuously is how many seats is each party leading in. Please design a system for this.
+Design a logging system (For web applications, it is common to have a large number of servers running the same application, with a load balancer in front to distribute the incoming requests. In this scenario, we want to check and alarm in case an exception is thrown in any of the servers. We want a system that checks for the appearance of specific words, "Exception", "Disk Full" etc. in the logs of any of the servers. How would you design this system?)
+
+
+But before you begin, here are some topics(in no particular order) which in my opinion you should have a decent idea of before proceeding.
+
+    Operating system basics: how a file system, virtual memory, paging, instruction execution cycle etc work (For starters silbershatz should be enough. If you already have decent knowledge try stallings book on OS)
+    Networking basics: Should know the TCP/IP stack, basics of how Internet, HTTP, TCP/IP work at the minimum. cs75 on youtube (1st lecture) should give a broad overview. I personally love networking-a top down approach.
+    Concurrency basics: threads, processes, threading in the language you know. Locks , mutex etc.
+    DB basics: types of DB's (SQL vs noSQL etc ), hashing and indexing, EAV based databases, Sharding, caching for databases, master-slave etc
+    A basic idea of how a basic web architecture is: say load balancers, proxy, servers, Database servers, caching servers, precompute, logging big data etc. Just know broadly what is each layer for.
+    very basic summary of what the CAP theorem is (Have never been asked about the theorem itself, but knowing it will help you in designing large-scale systems.
+
+=====================
+For software engineering candidates, we want to understand your coding skills and technical areas of expertise, including tools or programming languages and general knowledge on topics like data structures and algorithms. There’s generally some back and forth in these discussions, just like there is on the job, because we like to push each other’s thinking and learn about different approaches. So be prepared to talk through your solutions in depth. Push your own boundaries and find the best answer—that’s probably how you work anyway.
+
+
+
+Get yourself familiar with basic unix commands and using vi or any editor of your preferred choice.Create a simple C++ program(Ex: Square root of given number) where input is provided using command line argument.Compile your program using g++ command (both debug symbols and release build).Get yourself familiar with Makefile, Loader and linker basic concepts.Compile your program with both and release build using Makefile.
+
+just to add something apart from work. --> If you want to speed up things try below exercise in your free time (not office hours) 
+Create a class, add a function which print "Hello World class 1"
+Create another class, add a functi(different name on which print "Hello World class 2")
+Just classes, no main function.
+
+Create a class, add a function which print "Hello World class 1"compile this class. Create a static library from this class.
+Compile class 2 file and create static library with different name.
+Now create a file which has main function and you need to create object of class 1, class2 and call function which you have created in respective classes.
+This is a very good exercise for freshers who are directly coming to projects and you will get very good idea about how things works. Take help from internet as much you can. like 1
+But as I mentioned, this is something apart from work which you are doing, because above I expected you to do as part of understanding of linker exercise. 
+
+makefile, 
+valgrind 
+library type static/dynamic 
+linking 
+ 
+ 
+List current clients for a user                       p4 clients -u <username>    
+List current pending change lists for a user          p4 changes -u <username> -s pending
+List current opened shelves                           p4 changes -u <username> -s shelved
+List current checked out files for a user             p4 opened -u <username>
+List of opened files                                  p4 opened -u <username>
