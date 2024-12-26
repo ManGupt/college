@@ -1,0 +1,27 @@
+START : 
+                             LXI D,0000
+                             MVI B,06
+                             MVI E,06
+                             
+C2 : 
+                             MOV A,B
+                             CPI 01
+                             JZ END
+                             LXI H,0000
+                             
+                             
+C1 : 
+                             CPI 01
+                             JZ LOOP
+                             
+                             DAD D
+                             DCR A
+                             JMP C1
+                             
+LOOP : 
+                             XCHG
+                             DCR B
+                             JMP C2
+                             
+END : 
+                             HLT
